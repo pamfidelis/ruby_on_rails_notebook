@@ -24,6 +24,8 @@
   <div class="field">
     <%= form.label :kind_id %>
     <%= form.text_field :kind_id, id: :contact_kind_id %>
+    <!--  objeto que recebe, qual campo que recebe, qual o método, o que será guardado, o que será retornado -->
+    <%= collection_select(:contact, :kind_id, @kind_option_for_select, :id, :description) %>
   </div>
 
   <div class="field">
