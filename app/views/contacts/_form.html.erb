@@ -25,10 +25,34 @@
 
   <div class="field">
     <%= form.label :kind_id %>
-    <%= form.text_field :kind_id, id: :contact_kind_id %>
     <!--  objeto que recebe, qual campo que recebe, qual o método, o que será guardado, o que será retornado -->
-    <%= collection_select(:contact, :kind_id, @kind_option_for_select, :id, :description) %>
+    <%= form.collection_select(:kind_id, @kind_option_for_select, :id, :description) %>
   </div>
+
+  <%= form.fields_for :address do |address_fields| %>
+     <div class="field">
+      <%= form.label :street %><br>
+      <%= address_fields.text_field :street %>
+    </div>
+
+    <div class="field">
+      <%= form.label :city %><br>
+      <%= address_fields.text_field :city %>
+    </div>
+
+     <div class="field">
+      <%= address_fields.label :state %><br>
+      <%= address_fields.select :state, options_for_states(@contact.address.state) %>
+    </div>
+  <% end %>
+
+  <%= form.fields_for :phone do |phones_fields| %>
+     <div class="field">
+      <%= form.label :phone %><br>
+      <%= phones_fields.text_field :phone %>
+    </div>
+  <% end %>
+
 
   <div class="field">
     <%= form.label :rmk %>

@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.5'
 gem 'sqlite3'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
+# Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
+gem 'cocoon'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
