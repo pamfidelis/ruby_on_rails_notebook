@@ -10,9 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180326225304) do
-
-  create_table "addresses", force: :cascade do |t|
+ActiveRecord::Schema.define(version: 20180330221215) do
+  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "street"
     t.string "city"
     t.string "state"
@@ -22,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180326225304) do
     t.index ["contact_id"], name: "index_addresses_on_contact_id"
   end
 
-  create_table "contacts", force: :cascade do |t|
+  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "email"
     t.integer "kind_id"
@@ -32,13 +31,13 @@ ActiveRecord::Schema.define(version: 20180326225304) do
     t.index ["kind_id"], name: "index_contacts_on_kind_id"
   end
 
-  create_table "kinds", force: :cascade do |t|
+  create_table "kinds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "phones", force: :cascade do |t|
+  create_table "phones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "phone"
     t.integer "contact_id"
     t.datetime "created_at", null: false
@@ -46,4 +45,7 @@ ActiveRecord::Schema.define(version: 20180326225304) do
     t.index ["contact_id"], name: "index_phones_on_contact_id"
   end
 
+  add_foreign_key "addresses", "contacts"
+  add_foreign_key "contacts", "kinds"
+  add_foreign_key "phones", "contacts"
 end

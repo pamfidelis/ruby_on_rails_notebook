@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# MYSQL for develop
+gem 'mysql2', '~>0.4.10'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
 # Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
