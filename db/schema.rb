@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20180330221215) do
+
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "street"
     t.string "city"
@@ -44,8 +45,4 @@ ActiveRecord::Schema.define(version: 20180330221215) do
     t.datetime "updated_at", null: false
     t.index ["contact_id"], name: "index_phones_on_contact_id"
   end
-
-  add_foreign_key "addresses", "contacts"
-  add_foreign_key "contacts", "kinds"
-  add_foreign_key "phones", "contacts"
 end
