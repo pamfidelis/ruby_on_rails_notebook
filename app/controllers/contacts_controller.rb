@@ -78,7 +78,7 @@ class ContactsController < ApplicationController
                                        phones_attributes: [:id, :phone, :_destroy])
     end
 
-    def set_def options_for_select
+    def set_options_for_select
       @kind_option_for_select = Kind.all
     end
 end
