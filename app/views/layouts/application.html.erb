@@ -6,9 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'notify.js', '/notifyjs/notify' %>
+    <%= javascript_include_tag params[:controller] %>
+
   </head>
 
   <body>
+  <script>
+    $.notify("Hello World");
+  </script>
     <%= yield %>
   </body>
 </html>
