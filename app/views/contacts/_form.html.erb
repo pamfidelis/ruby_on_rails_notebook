@@ -52,7 +52,7 @@
     <% end %>
 
     <div class="field">
-      <%= form.label :phones, '>' %>
+      <%= form.label :phones, "<span class='glyphicon glyphicon-phone-alt' aria-hidden='true'></span>".html_safe %><br>
       <%= link_to_add_association('[Adicionar Telefone]', form, :phones) %>
     </div>
   </div>
@@ -63,7 +63,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Enviar", class: "button" %>
-    <%= link_to "Back", contacts_path, class: "button" %>
+    <%= form.submit "Enviar", class: "btn btn-primary" %>
+    <%= link_to "Back", contacts_path, class: "btn btn-danger" %>
   </div>
 <% end %>

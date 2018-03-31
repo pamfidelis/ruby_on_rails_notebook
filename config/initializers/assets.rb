@@ -22,4 +22,4 @@ Rails.application.config.assets.precompile += %w( addresses.js
                                                   home.css
                                                   kinds.css
                                                   phones.css
-                                                  notify.js)
+                                                  notify.js )
