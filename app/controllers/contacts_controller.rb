@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all.page params[:page]
+    @contacts = Contact.all.page(params[:page]).per(15)
   end
 
   # GET /contacts/1

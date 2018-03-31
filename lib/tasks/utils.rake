@@ -1,5 +1,5 @@
 namespace :utils do
-  
+
   desc "Popular banco de dados."
   task seed: :environment do
     puts "Gerando os contatos (Contacts)..."
@@ -12,7 +12,7 @@ namespace :utils do
         )
       end
     puts "Gerando os contatos (Contacts)... [OK]"
-    
+
     puts "Gerando os endereços (Addresses)..."
       Contact.all.each do |contact|
         Address.create!(
@@ -23,7 +23,7 @@ namespace :utils do
         )
       end
     puts "Gerando os endereços (Addresses)... [OK]"
-    
+
     puts "Gerando os telefones (Phones)..."
       Contact.all.each do |contact|
         Random.rand(1..5).times do |i|
