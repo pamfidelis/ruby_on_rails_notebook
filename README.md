@@ -1,24 +1,17 @@
-# README
+# Agenda - Course Ruby on Rais (Udemy)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Projeto desenvolvido com o intuito de aprender conceitos básicos do framework Ruby On Rails.
 
-Things you may want to cover:
+## Banco usado:
+* MySQL.
 
-* Ruby version
+## Linguagens:
+* en;
+* pt-BR.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Gems incluídas ao longo do projeto:
+* ``` faker ``` e ``` lerolero_generator ``` ```ruby  # utilizadas na geração de dados fake para popular o banco de dados```
+* ``` cocoon ``` ```ruby # utilização de JQuery nos formulários```
+* ``` rails-i18n ``` ```ruby # iternalização da api ```
+* ``` rails-assets-bootstrap ``` ```ruby # melhoria nos templates ```
+* ``` kaminari ``` ```ruby # usado para a paginação```

@@ -14,6 +14,8 @@ gem 'sqlite3'
 gem 'mysql2', '~>0.4.10'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 # Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms
 gem 'cocoon'
 # Use Puma as the app server
@@ -43,8 +45,6 @@ gem 'rails-i18n'
 gem 'rails-assets-bootstrap', '4.0.0', source: 'https://rails-assets.org' 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Rails 3 and 4
 gem 'kaminari'
-# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
-gem 'lerolero_generator'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
