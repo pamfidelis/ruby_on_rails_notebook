@@ -5,12 +5,12 @@
   </script>
 
 
-  <h1>Kinds</h1>
+    <h1><%= "#{@kinds.model.model_name.human(count: @kinds.count)}" %><h1>
 
   <table>
     <thead>
       <tr>
-        <th>Description</th>
+        <th><%= @kinds.model.human_attribute_name("description") %></th>
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -19,8 +19,8 @@
       <% @kinds.each do |kind| %>
         <tr style = "background: <%= cycle("white", "#d1d1e0")%>">
           <td><%= kind.description %></td>
-          <td><%= link_to 'Edit', edit_kind_path(kind) %></td>
-          <td><%= link_to 'Destroy', kind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to t('buttons.edit'), edit_kind_path(kind) %></td>
+          <td><%= link_to t('buttons.destroy'), kind, method: :delete, data: { confirm: t('messages.confirm') } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -28,6 +28,6 @@
 
   <br>
 
-  <%= link_to "Novo", new_kind_path, class: "btn btn-primary" %> | 
-  <%= link_to "Home", root_path, class: "btn btn-default" %>
+  <%= link_to t('buttons.new'), new_kind_path, class: "btn btn-primary" %> | 
+  <%= link_to t('buttons.home'), root_path, class: "btn btn-success" %>
 </div>

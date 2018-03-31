@@ -1,0 +1,32 @@
+en:
+  activerecord:
+    models:
+      contact:
+        one: Contact
+        other: Contacts
+      kind:
+        one: Kind
+        other: Kinds
+      address:
+        one: Address
+        other: Addresses
+      phone:
+        one: Phone
+        other: Phones
+    attributes:
+      kind:
+        description: Description
+      contact:
+        name: name
+        email: Email
+        kind: Kind
+        kind_id: Kind
+        rmk: Rmk.
+      address:
+        street: Street
+        city: City
+        state: State
+        contact_id: Contact
+        contact: Contact
+      phone:
+        phone: Phone
