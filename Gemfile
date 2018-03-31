@@ -41,6 +41,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'rails-i18n'
 #Bootstrp
 gem 'rails-assets-bootstrap', '4.0.0', source: 'https://rails-assets.org' 
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Rails 3 and 4
+gem 'kaminari'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
