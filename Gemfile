@@ -43,6 +43,8 @@ gem 'rails-i18n'
 gem 'rails-assets-bootstrap', '4.0.0', source: 'https://rails-assets.org' 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Rails 3 and 4
 gem 'kaminari'
+# O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
