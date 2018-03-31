@@ -1,6 +1,8 @@
 class KindsController < ApplicationController
   before_action :set_kind, only: [:show, :edit, :update, :destroy]
 
+  http_basic_authenticate_with name: 'pam', password: '12345', only: :destroy
+
   # GET /kinds
   # GET /kinds.json
   def index
