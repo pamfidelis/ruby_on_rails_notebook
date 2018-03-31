@@ -1,17 +1,5 @@
 <%= form_for(@kind, html: { class: "basic-grey" }) do |form| %>
-  <% if kind.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(kind.errors.count, "error") %> prohibited this kind from being saved:</h2>
-
-      <ul>
-      <% kind.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <h1>Kinds</h1>
+  <h1><%= t('kinds') %></h1>
 
   <div class="field">
     <%= form.label :description %>
@@ -22,4 +10,16 @@
     <%= form.submit "Enviar", class: "btn btn-primary" %>
     <%= link_to 'Back', kinds_path, class: "btn btn-danger" %>
   </div>
+
+  <% if kind.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kind.errors.count, "error") %> <%= t('messages.error') %></h2>
+
+      <ul>
+      <% kind.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <% end %>

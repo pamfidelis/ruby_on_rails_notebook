@@ -2,7 +2,7 @@
   messages:
     confirm: Are you sure?
     listing: Listing
-    errors: Erros...
+    errors: errors occurred ...
     created: Item successfully created!
     updated: Item successfully updated!
     destroyed: Item successfully destroyed!

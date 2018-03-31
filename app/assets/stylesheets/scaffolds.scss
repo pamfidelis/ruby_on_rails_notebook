@@ -4,9 +4,8 @@ a {
 }
 
 table {
-    width: 100%
+    width: 100%;
 }
-
 .basic-grey {
     margin-left:auto;
     margin-right:auto;
@@ -17,7 +16,7 @@ table {
     border:1px solid #E4E4E4;
 }
 .basic-grey h1 {
-    font-size: 20px;
+    font-size: 25px;
     padding: 0px 0px 10px 40px;
     display: block;
     border-bottom:1px solid #E4E4E4;
@@ -32,13 +31,20 @@ table {
     display: block;
     margin: 0px;
 }
-.basic-grey label>span {
+.basic-grey div.field>label {
     float: left;
     width: 20%;
     text-align: right;
     padding-right: 10px;
     margin-top: 10px;
     color: #888;
+}.basic-grey div.field_with_errors>label {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #ff0000;
 }
 .basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
     border: 1px solid #DADADA;
@@ -56,6 +62,7 @@ table {
     -moz-box-shadow: inset 0px 1px 4px #ECECEC;
     -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
+
 .basic-grey input[type="text"].phone-field{
     border: 1px solid #DADADA;
     color: #888;
@@ -72,12 +79,13 @@ table {
     -moz-box-shadow: inset 0px 1px 4px #ECECEC;
     -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
+
 .basic-grey textarea{
     padding: 5px 3px 3px 5px;
 }
 .basic-grey select {
-    background: #FFF url('down-arrow.png') no-repeat right;
-    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF image-url('down-arrow.png') no-repeat right;
+    background: #FFF image-url('down-arrow.png') no-repeat right;
     appearance:none;
     -webkit-appearance:none; 
     -moz-appearance: none;

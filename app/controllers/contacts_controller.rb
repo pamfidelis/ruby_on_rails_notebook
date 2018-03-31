@@ -1,11 +1,13 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_options_for_select, only: [:new, :edit, :update, :create]
+
   http_basic_authenticate_with name: 'pam', password: '12345', only: :destroy
 
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all.page(params[:page]).per(15)
+    @contacts = Contact.page(params[:page]).per(15)
   end
 
   # GET /contacts/1
@@ -17,12 +19,10 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @contact.build_address
-    options_for_select
   end
 
   # GET /contacts/1/edit
   def edit
-    options_for_select
   end
 
   # POST /contacts
@@ -78,7 +78,7 @@ class ContactsController < ApplicationController
                                        phones_attributes: [:id, :phone, :_destroy])
     end
 
-    def options_for_select
+    def set_def options_for_select
       @kind_option_for_select = Kind.all
     end
 end
