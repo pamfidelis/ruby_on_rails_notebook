@@ -1,27 +1,56 @@
 /* Basic Grey */
+.title {
+    text-align: center;
+    font-size: 30px;
+}
 a {
     color: #888;
 }
-
 table {
     width: 100%;
+}
+tr>th {
+    text-align: center;
+}
+td>a {
+    font-size: 20px;
+    padding: 5px;
+}
+.basic-grey-home {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 900px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    color: #888;
+    border:15px ridge #E4E4E4;
+    font-size: 20px;
+}
+.basic-grey-home h1 {
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:8px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
 }
 .basic-grey {
     margin-left:auto;
     margin-right:auto;
-    max-width: 500px;
+    width:  max-content;
+    max-width: 900px;
     background: #F7F7F7;
     padding: 25px 15px 25px 10px;
     color: #888;
     border:1px solid #E4E4E4;
+    font-size: 20px;
 }
 .basic-grey h1 {
-    font-size: 25px;
     padding: 0px 0px 10px 40px;
     display: block;
     border-bottom:1px solid #E4E4E4;
     margin: -10px -15px 30px -10px;;
     color: #888;
+    width: 100%;
 }
 .basic-grey h1>span {
     display: block;
@@ -55,14 +84,13 @@ table {
     margin-top: 2px;
     outline: 0 none;
     padding: 3px 3px 3px 5px;
-    width: 70%;
-    font-size: 12px;
+    width: 55%;
+    font-size: 20px;
     line-height:15px;
     box-shadow: inset 0px 1px 4px #ECECEC;
     -moz-box-shadow: inset 0px 1px 4px #ECECEC;
     -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
-
 .basic-grey input[type="text"].phone-field{
     border: 1px solid #DADADA;
     color: #888;
@@ -73,13 +101,12 @@ table {
     outline: 0 none;
     padding: 3px 3px 3px 5px;
     width: 55%;
-    font-size: 12px;
+    font-size: 20px;
     line-height:15px;
     box-shadow: inset 0px 1px 4px #ECECEC;
     -moz-box-shadow: inset 0px 1px 4px #ECECEC;
     -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
-
 .basic-grey textarea{
     padding: 5px 3px 3px 5px;
 }
